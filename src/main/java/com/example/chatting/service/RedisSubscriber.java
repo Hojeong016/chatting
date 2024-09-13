@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class RedisSubscriber {
     public void onMessage(String message, String channel) {
-        System.out.println("메세지 내용 : "+ message + "채널 : " + channel);
+        System.out.println("메세지 내용 : "+ message +"\n"+ "채널 : " + channel);
     }
 }

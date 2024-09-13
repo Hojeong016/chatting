@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat</title>
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("messageInput").value;
+            fetch('/chat/send?message=' + message, { method: 'POST' });
+            document.getElementById("messageInput").value = '';
+        }
+    </script>
+</head>
+<body>
+<h1>Chat Room</h1>
+<input type="text" id="messageInput" placeholder="Type your message" />
+<button onclick="sendMessage()">Send</button>
+</body>
+</html>
